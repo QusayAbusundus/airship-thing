@@ -8,10 +8,17 @@ public class PlayerController : MonoBehaviour
 	public float tilt;
 	private Rigidbody rigidbody;
 	
+	
+	
 	void Start()
 	{
 		rigidbody = GetComponent<Rigidbody>();
 	}
+	
+	/*void Update()
+	{
+		Instantiate(object, position, rotation);
+	}*/
 	
 	void FixedUpdate()
 	{
