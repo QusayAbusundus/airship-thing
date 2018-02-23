@@ -50,6 +50,6 @@ public class PlayerController : MonoBehaviour
 			0.0f
 		);*/
 		
-		rigidbody.rotation = Quaternion.Euler(0.0f, 0.0f, rigidbody.velocity.x * -tilt);
+		rigidbody.rotation = Quaternion.Euler(rigidbody.velocity.y * -tilt, 0.0f, rigidbody.velocity.x * -tilt);
 	}
 }
