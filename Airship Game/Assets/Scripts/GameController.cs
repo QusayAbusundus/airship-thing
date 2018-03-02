@@ -27,7 +27,7 @@ public class GameController : MonoBehaviour
 				(
 					boundary.position.x	+ Random.Range(-(boundary.localScale.x/2), (boundary.localScale.x/2)),
 					boundary.position.y + Random.Range(-(boundary.localScale.y/2), (boundary.localScale.y/2)), 
-					boundary.localScale.z/2
+					boundary.localScale.z
 				);
 				Quaternion spawnRotation = Quaternion.identity;
 				Instantiate(hazard, spawnPosition, spawnRotation);
