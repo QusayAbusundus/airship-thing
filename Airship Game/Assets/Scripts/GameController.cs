@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class GameController : MonoBehaviour 
 {
+	public GameObject player;
 	public GameObject hazard;
 	public Transform boundary;
 	public int hazardCount;
@@ -32,9 +33,17 @@ public class GameController : MonoBehaviour
 	
 	void Update()
 	{
-		if(restart && Input.GetKeyDown(KeyCode.R))
+		if(player == null)
 		{
-			Application.LoadLevel(Application.loadedLevel);
+			restart = true;
+		}
+		
+		if(restart)
+		{
+			if(Input.GetKeyDown(KeyCode.R))
+			{
+				Application.LoadLevel(Application.loadedLevel);
+			}
 		}
 	}
 	
